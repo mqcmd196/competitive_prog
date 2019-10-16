@@ -1,33 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int wrong_point(int i, int n){
-    if(i == n){
-        return 0;
-    }else{
-        return 1;
-    }
-}
  
 int main(){
-    int N, Q;
+    int N;
+    long Q;
     long K;
-    cin >> N, K, Q;
+    cin >> N;
+    cin >> K;
+    cin >> Q;
     
     vector<int> A(Q);
     for(int i=0; i<Q; i++){
         cin >> A[i];
     }
 
-    vector<long> point(N, K);
+    vector<long> point(N, K-Q);
 
     for(int i=0; i<Q; i++){
-        for(int j=0; j<N; j++){
-            //ここ直せ
-            point[j] - wrong_point(j, A[i]);
-        }
+        point[A[i] - 1] += 1;
     }
-
+    
     for(int i=0; i<N; i++){
         if(point[i] <= 0){
             printf("No\n");
