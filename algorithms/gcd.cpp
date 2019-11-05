@@ -1,3 +1,4 @@
+//最大公約数を求める
 long gcd(long a, long b){
     if(b == 0){
         return a;

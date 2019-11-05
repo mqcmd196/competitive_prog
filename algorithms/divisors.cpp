@@ -1,3 +1,4 @@
+//約数を求める
 #include <bits/stdc++.h>
 using namespace std;
 
