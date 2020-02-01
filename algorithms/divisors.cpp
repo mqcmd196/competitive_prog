@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//The order is sqrt(n). If sore_mode is true, the order is sqrt(n)*log(n).
+//The order is sqrt(n). If sort_mode is true, the order is sqrt(n)*log(n).
 vector<long> divisors(long n, bool sort_mode = false){
     vector<long> result;
     for(long i = 1; i < ceil(sqrt((long double)n)); i++){
