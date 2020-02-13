@@ -28,7 +28,7 @@ int main(){
         }
     }
 
-    cout << (double)ans / 2.0 << endl;
+    cout << setprecision(10) << (double)ans / 2.0 << endl;
 
     return 0;
 }

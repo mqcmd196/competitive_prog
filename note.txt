@@ -1,2 +1,3 @@
 sumitrust2019C -> why? 2000円以上OK？
-ABC154D -> なんで？
+ABC154D -> なんで？ -> solved
+ABC152D -> あとで
