@@ -58,4 +58,4 @@ for i in range(10):
                 break
 
 if not one_island:
-    print('NO') 
+    print('NO')
