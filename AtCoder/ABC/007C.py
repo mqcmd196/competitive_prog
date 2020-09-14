@@ -30,18 +30,16 @@ def bfs(c, start, goal, R, C):
     visited = [[False for _ in range(C)] for _ in range(R)]
     visited[start[0]][start[1]] == True
     queue.append(start)
+    path = []
 
     while len(queue) != 0:
-        node = queue[0]
-        if node == goal:
-            return queue
-        else:
-            child = visit_child(c, node[0], node[1], R, C, visited)
-            if child == False:
-                queue.pop(0)
-            else:
-                visited[child[0]][child[1]] = True
-                queue.insert(0, child)
+        node = queue.pop(0)
+        child = visit_child(c, node[0], node[1], R, C, visited)
+        if child != False:
+            queue.append(child)
+            visited[child[0]][child[1]] = True
+            path.append()
+
 
 result = bfs(c, [sy, sx], [gy, gx], R, C)
 print(result)
