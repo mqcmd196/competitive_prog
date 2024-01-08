@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool f(unsigned long long i, unsigned long long j, vector<unsigned long long> &A){
+bool f(int64_t i, int64_t j, vector<int64_t> &A){
     // A_0, ... A_i-1 の中から総和がjと等しくなるよういくつかの数字を選べるか
     // 前からi-1個の数字を用いてjを作ることができる or 前からi-1個の数字を用いてj-A_i-1を作ることができる
     if(i==0){
@@ -11,7 +11,7 @@ bool f(unsigned long long i, unsigned long long j, vector<unsigned long long> &A
             return false;
         }
     }else{
-        bool flag;
+        bool flag = false;
         if(j >= A.at(i-1) and f(i-1, j-A.at(i-1), A)){
             flag = true;
         }
@@ -22,14 +22,13 @@ bool f(unsigned long long i, unsigned long long j, vector<unsigned long long> &A
     }
 }
 
-// TODO review more!
 int main() {
-    unsigned long long N, X;
+    int64_t N, X;
     cin >> N >> X;
 
-    vector<unsigned long long> A(N);
-    for(size_t i=0; i<N; i++){
-        cin >> A.at(i);
+    vector<int64_t> A(N);
+    for(auto &a: A){
+        cin >> a;
     }
 
     if(f(N, X, A)){

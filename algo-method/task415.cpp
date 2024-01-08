@@ -2,13 +2,15 @@
 using namespace std;
 
 int main() {
-    uint64_t N, X;
+    int N, X;
     cin >> N >> X;
 
-    vector<uint64_t> A(N-1);
+    vector<int> A(N-1);
     for(auto &a: A){
         cin >> a;
     }
+
+
 
     return 0;
 }
