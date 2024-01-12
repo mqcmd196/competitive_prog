@@ -1,1 +1,1 @@
-../CMakeLists.txt
+../common_build.cmake
